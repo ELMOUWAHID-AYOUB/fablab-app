@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="openModal()">Ouvrir le modal</button>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <p>Ceci est le contenu du modal.</p>
+  </div>
+  <?php
+if ($condition == true) {
+    // Afficher le bouton pour ouvrir le modal
+    echo '<button onclick="openModal()">Ouvrir le modal</button>';
+    
+    // Afficher le contenu du modal
+    echo '<div id="myModal" class="modal">';
+    echo '<div class="modal-content">';
+    echo '<span class="close" onclick="closeModal()">&times;</span>';
+    echo '<p>Ceci est le contenu du modal.</p>';
+    echo '</div>';
+    echo '</div>';
+}
+?>
+
+</div>
+</body>
+</html>

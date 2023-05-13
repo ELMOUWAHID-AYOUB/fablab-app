@@ -1,0 +1,12 @@
+{
+    "overrides": [
+      {
+        "files": "*.php",
+        "options": {
+          "parser": "php",
+          "singleQuote": true
+        }
+      }
+    ]
+  }
+  

@@ -1,0 +1,2 @@
+<?php if($salle="A7") echo "checked" ; ?>
+<?php if($salle="A6") echo "checked" ; ?>
