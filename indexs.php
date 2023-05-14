@@ -18,7 +18,7 @@
                     <div class="card-body">
                     <h5 class="card-title">Pc hp</h5>
                     <p class="card-text">tu peux ajouter supprimer et modiffe les pc portables</p>
-                    <a href="index1.php" class="btn btn-primary">Go To Computer page</a>
+                    <a href="indexs8.php?genre=pc" class="btn btn-primary">Go To Computer page</a>
                 </div>
             </div>
         </div>
@@ -29,7 +29,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Retour cisco</h5>
                   <p class="card-text">tu peux ajouter supprimer et modiffe les Retours</p>
-                  <a href="index2.php" class="btn btn-primary">Go To Retour  page</a>
+                  <a href="indexs8.php?genre=routeur" class="btn btn-primary">Go To Retour  page</a>
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Switch</h5>
                   <p class="card-text">tu peux ajouter supprimer et modiffe les pc switch</p>
-                  <a href="index3.php" class="btn btn-primary">Go To switch page</a>
+                  <a href="indexs8.php?genre=switch" class="btn btn-primary">Go To switch page</a>
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@
                <div class="card-body">
                  <h5 class="card-title">serveur</h5>
                  <p class="card-text">tu peux ajouter supprimer et modiffe lesserveur</p>
-                 <a href="index4.php" class="btn btn-primary">Go To serveur page</a>
+                 <a href="indexs8.php?genre=serveur" class="btn btn-primary">Go To serveur page</a>
                </div>
            </div>
        </div>
@@ -64,7 +64,7 @@
                <div class="card-body">
                  <h5 class="card-title">parfeu</h5>
                  <p class="card-text">tu peux ajouter supprimer et modiffe parfeu </p>
-                 <a href="index5.php" class="btn btn-primary">Go parfeu  page</a>
+                 <a href="indexs8.php?genre=pare-feu" class="btn btn-primary">Go parfeu  page</a>
                </div>
            </div>
        </div>
@@ -75,7 +75,7 @@
                <div class="card-body">
                  <h5 class="card-title">voiip</h5>
                  <p class="card-text">tu peux ajouter supprimer et modiffe les voiip</p>
-                 <a href="index6.php" class="btn btn-primary">Go To voiip page</a>
+                 <a href="indexs8.php?genre=voiip" class="btn btn-primary">Go To voiip page</a>
                </div>
            </div>
        </div>
@@ -88,7 +88,7 @@
            <div class="card-body">
              <h5 class="card-title">Interfaces</h5>
              <p class="card-text">tu peux ajouter supprimer et modiffe lesInterfaces</p>
-             <a href="index7.php" class="btn btn-primary">Go ToInterfaces page</a>
+             <a href="indexs8.php?genre=interface" class="btn btn-primary">Go ToInterfaces page</a>
            </div>
        </div>
    </div>
@@ -99,7 +99,7 @@
            <div class="card-body">
              <h5 class="card-title">connectiques </h5>
              <p class="card-text">tu peux ajouter supprimer et modiffe les connectiques</p>
-             <a href="indexs8.php" class="btn btn-primary">Go To connectiques page</a>
+             <a href="indexs8.php?genre=connecteur" class="btn btn-primary">Go To connectiques page</a>
            </div>
        </div>
    </div>
@@ -110,7 +110,7 @@
            <div class="card-body">
              <h5 class="card-title">Tous</h5>
              <p class="card-text">tu peux ajouter supprimer et modiffe Tous</p>
-             <a href="index9.php" class="btn btn-primary">Go To Tous page</a>
+             <a href="indexs8.php?genre=not null" class="btn btn-primary">Go To Tous page</a>
            </div>
        </div>
    </div>

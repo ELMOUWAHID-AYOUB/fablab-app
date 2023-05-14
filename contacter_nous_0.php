@@ -8,25 +8,17 @@
     <title>Contactez-nous</title>
 </head>
 <body>
-    <?php include_once('navsite.php'); ?>
+    <?php include_once('navsite0.php'); ?>
 <section class="container mt-5">
   <h2>Contactez-nous</h2>
 <form action="" method="post">
-    <div class="form-group">
-        <label for="name">Nom</label>
-        <input type="text" class="form-control" id="name" name="name" required>
+<div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
     </div>
     <div class="form-group">
         <label for="email">Email</label>
         <input type="email" class="form-control" id="email" name="email" required>
-    </div>
-    <div class="form-group">
-        <label for="subject">Sujet</label>
-        <input type="text" class="form-control" id="subject" name="subject" required>
-    </div>
-    <div class="form-group">
-        <label for="message">Message</label>
-        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
     </div>
     <button type="submit" name="submit" class="btn btn-primary">Envoyer</button>
 </form>
@@ -37,9 +29,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 if(isset($_POST['submit'])) {
-    $to = "elmouwahid2001@gmail.com"; // Entrez votre adresse e-mail ici
-    $name = $_POST['name'];
     $email = $_POST['email'];
+    $to = $email; // Entrez votre adresse e-mail ici
+    $name = $_POST['name'];
     $subject = $_POST['subject'];
     $message = $_POST['message'];
 

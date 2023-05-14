@@ -7,16 +7,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="page.php">Se Connecter</a>
+            <a class="nav-link" href="page.php">SE CONNECTER</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="compte.php">Cree Un Compte</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="compte.php">CREE UN COMPTE </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="aproprs.php">A Propos</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="aproprs.php">A PROPRS</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contacternous.php">Contact</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="contacternous.php">CONTACT</a>
           </li>
         </ul>
       </div>

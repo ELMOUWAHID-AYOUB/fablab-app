@@ -6,15 +6,16 @@
   <!-- Liaison du CSS de Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <?php include_once('navsite0.php'); ?>
   <div class="container mt-5">
-  <h1>Notre site:</h1>
+  <h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNotre site</h1>
     <div class="row">
       <div class="col-md-6">
         <!-- Affichage de l'image -->
-        <img src="image/inventaire.webp" class="img-fluid" alt="Image">
+        <img src="image/inventaire.webp" class="rounded-circle" alt="Image" width=500px; height=300px;>
       </div>
       <div class="col-md-6">
         <!-- Affichage du texte -->

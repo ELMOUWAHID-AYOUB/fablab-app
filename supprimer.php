@@ -1,5 +1,5 @@
 <?php
- include_once('navsitep.php');
+include_once('navsitep.php');
 // Connexion à la base de données
 $serveur = "localhost";
 $utilisateur = "root";
@@ -17,11 +17,9 @@ if (isset($_GET["id"])) {
   $requete->bind_param("i", $id);
 
   if ($requete->execute()) {
-    
     echo "Demande de réservation supprimée avec succès.";
-   header("location:demande.php");
+    header("location:demande.php");
   } else {
     echo "Erreur lors de la suppression de la demande de réservation.";
   }
 }
-?>

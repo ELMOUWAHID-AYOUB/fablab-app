@@ -21,28 +21,28 @@ $_SESSION['last_page'] = $_SERVER['REQUEST_URI'];
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="indexs8.php?genre=pc">PC</a>
+            <a class="nav-link" href="index8.php?genre=pc">PC</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="indexs8.php?genre=routeur">ROUTEUR</a>
+            <a class="nav-link" href="index8.php?genre=routeur">ROUTEUR</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="indexs8.php?genre=switch">SWITCH</a>
+            <a class="nav-link" href="index8.php?genre=switch">SWITCH</a>
           </li>
           <li class="nav-item  active">
-            <a class="nav-link" href="indexs8.php?genre=serveur">SERVEUR</a>
+            <a class="nav-link" href="index8.php?genre=serveur">SERVEUR</a>
           </li>
           <li class="nav-item  active">
-            <a class="nav-link" href="indexs8.php?genre=pare-feu">PARE-FEU</a>
+            <a class="nav-link" href="index8.php?genre=pare-feu">PARE-FEU</a>
           </li>
           <li class="nav-item  active">
-            <a class="nav-link" href="indexs8.php?genre=voip">VOIP</a>
+            <a class="nav-link" href="index8.php?genre=voip">VOIP</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="indexs8.php?genre=interface">INTERFACE</a>
+            <a class="nav-link" href="index8.php?genre=interface">INTERFACE</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="indexs8.php?genre=connecteur">CONNECTIQUE</a>
+            <a class="nav-link" href="index8.php?genre=connecteur">CONNECTIQUE</a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="deconnecter.php">SE DECONNECTER</a>

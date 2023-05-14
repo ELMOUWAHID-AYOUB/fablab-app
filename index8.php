@@ -4,14 +4,16 @@
 <head>
 	<title>Application d'inventaire</title>
 	<link rel="stylesheet" href="bootstrap-5.3.0-alpha3-dist\css\bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="stylVe.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body>
+<body style="background-color: #CCCCCC">
 	<?php
-	include_once('navsite.php'); ?>
+	error_reporting(0);
+	include_once('navsitei.php'); ?>
 	<div class="container">
 		<?php require_once 'process.php'; ?>
+		<?php $genre=$_GET['genre']; ?>
 		<?php if (isset($_SESSION['message'])) : ?>
 			<div class="alert alert-<?= $_SESSION['msg_type'] ?>">
 				<?php
@@ -20,12 +22,21 @@
 				?>
 			</div>
 		<?php endif ?>
-		<h2 class="text text-success">Ajouter un connecteur à l'inventaire:</h2>
-		<div style=""><img src="image/connectiques.jpG" alt="connecteur" width=300px height=250px></div>
 		<form action="process.php" method="POST">
+		<div id ="image" class="row">
+		<div class="form-group col-md-6">
+			<br> 
+		<div ><img src="image/<?php echo $genre; ?>.jpg" alt="<?php echo $genre; ?>" class="genre-image" >
+	</div>
+						</div>
+						<div class="form-group col-md-6">
+							<br><br><br><br><br><br>
+							<input type="file" name="nomDuFichier" accept=".csv, .txt, .xlsx" value="vide" class="margin" >
+						</div>
+					</div>
 			<input type="hidden" name="id" value="<?php echo $id; ?>">
 			<div class="form-group">
-				<input list="browsers" type="hidden" name="nom" class="form-control" placeholder="Entrez le nom" value="connecteur">
+				<input list="browsers" type="hidden" name="nom" class="form-control" placeholder="Entrez le nom" value="<?php echo $genre ?>">
 				<datalist id="browsers">
 					<option value="connectiques">
 				</datalist>
@@ -74,25 +85,19 @@
 							<button type="submit" class="btn btn-primary" name="save">Ajouter</button>
 						<?php endif ?>
 					</div>
-					<div class="row">
-						<div class="form-group col-md-12">
-							<input type="file" name="nomDuFichier" value="<?php echo $fiche; ?>" accept=".csv, .txt, .xlsx">
-						</div>
-					</div>
 		</form>
 	</div>
 	</div>
-	<h2>Liste des connecteur de l'inventaire</h2>
+	<h2>Table des  <?php echo $genre ?>s: </h2>
 	<table class="table">
 		<thead>
 			<tr>
-				<th>Nom</th>
-				<th>module</th>
-				<th>salle</th>
-				<th>Date</th>
-				<th>etat</th>
-
-				<th>Action</th>
+				<th>NOM</th>
+				<th>MODULE</th>
+				<th>SALLE</th>
+				<th>DATE</th>
+				<th>ETAT</th>	
+				<th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspACTION</th>
 
 			</tr>
 		</thead>
@@ -100,8 +105,9 @@
 
 			<?php
 			$index = 'index8';
+			// echo $index;
 			if (true) {
-				$result = $mysqli->query("SELECT * FROM equi where nom='connecteur' ") or die($mysqli->error);
+				$result = $mysqli->query("SELECT * FROM equi where nom='$genre' ") or die($mysqli->error);
 
 				if ($result->num_rows) {
 					while ($row = $result->fetch_assoc()) {
@@ -112,20 +118,34 @@
 						echo "<td>" . $row['Date'] . "</td>";
 						echo "<td>" . $row['etat'] . "</td>";
 						echo "<td>
-                            <a href='index8.php?edit=" . $row['id'] . "&index=" . $index . "' class='btn btn-info'>Modifier</a>
-                            <a href='process.php?delete=" . $row['id'] . "' class='btn btn-danger'>Supprimer</a>
+                            <a href='index8.php?genre=$genre&edit=" . $row['id'] . "&index=" . $index . "' class='btn btn-info'>Modifier</a>
+                            <a href='process.php?genre=$genre&delete=" . $row['id'] . "' class='btn btn-danger'>Supprimer</a>
                         </td>";
-						
-						echo "<td>";
-						echo "==" . $row['id'];
-						include('modal.php');
-						echo "==" . $row['id'];
-						echo "</td>";
 						echo "</tr>";
+						echo "<td>";
+						include('modal.php');
+						echo "</td>";
 					}
 				} else {
 					echo "<tr><td colspan='5'>Aucun résultat trouvé.</td></tr>";
 				}
+			}
+			$idd = $_GET['d'];
+			if (!empty($idd)) {
+
+				echo '<script>
+				window.onload = function() {
+			// notre code JavaScript
+		  let message = "Cliquez  sur OK pour revenir a la page pricipale";
+		 if (window.confirm(message)) {
+		window.location.href = "suppequip.php?genre='.$genre.'&delete=' . $id . '";
+		 }
+		 else{
+			window.location.href = "index8.php?genre='. $genre .'";
+
+		 }
+		};
+		 </script>';
 			}
 			?>
 			<?php //endwhile; 
@@ -134,5 +154,5 @@
 	</table>
 	</div>
 </body>
-
+<link rel="stylesheet" type="text/css" href="style.css">
 </html>

@@ -10,6 +10,7 @@
 	<div class="container">
 		<h1 class="text text-center text-primary">Application d'inventaire</h1>
 		<?php require_once 'process.php'; ?>
+		<?php $genre=$_GET['genre']; ?>
 	<?php if (isset($_SESSION['message'])): ?>
 	<div class="alert alert-<?=$_SESSION['msg_type']?>">
 		<?php 
@@ -18,12 +19,10 @@
 		?>
 	</div>
 	<?php endif ?>
-	<h2 class="text text-success">Ajouter un connecteur à l'inventaire</h2>
 	<div style=""><img src="image/connectiques.jpG" alt="connecteur" width=300px  height=250px></div>
         </div>
     </div>
 	<div class="container">
-	<h2>Liste des connecteur de l'inventaire</h2>
 	<table class="table">
 		<thead>
 			<tr>
@@ -40,7 +39,7 @@
         <?php 
           $index='index8';
         if (true) {
-            $result = $mysqli->query("SELECT * FROM equi where nom='connecteur' ") or die($mysqli->error);
+            $result = $mysqli->query("SELECT * FROM equi where nom=$genre ") or die($mysqli->error);
     
             if ($result->num_rows) {
                 while ($row = $result->fetch_assoc()) {

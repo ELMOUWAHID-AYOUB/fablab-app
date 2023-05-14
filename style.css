@@ -33,3 +33,11 @@ body {
 	line-height: 1.5;
 	border-radius: 0.3rem;
 }
+.genre-image {
+    width: 300px;
+    height: 250px;
+    margin-left: 20px;
+}
+.card{
+	margin:0px 0px 0px 10px;
+}

@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="style1.css">
 </head>
-<body style="background-image: url(ensajj.jpg)">
+<body style="background-image: url(image/ensajj.jpg)">
 	<?php include_once('navsite0.php'); ?>
 	<div class="container">
 		<div class="row">

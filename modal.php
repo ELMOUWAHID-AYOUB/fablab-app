@@ -18,36 +18,29 @@
   if ($mysqli->connect_error) {
     die("Connection failed: " . $mysqli->connect_error);
   }
-
   // Récupérer le contenu du modal à partir de la base de données
   $id = $row['id'];
-  echo $row['id'];
   $sqll = "SELECT * FROM equi WHERE id=$id";
   $resultt = $mysqli->query($sqll);
-  echo $row['id'];
-
-  echo $row['id'];
-
-  print_r($resultt);
   $roww = $resultt->fetch_assoc();
-  echo "ee";
-  print_r($roww);
-  echo $roww["id"];
-  $content = $roww["descriptive"];
-  echo $content;
+  $content =$roww["descriptive"];
+  
   // Afficher le bouton pour ouvrir le modal
   echo '<button onclick="openModal('.$id.')">OPEN</button>';
   // Afficher le contenu du modal
+  $file_path = "fichier/$content";
+  // read the contents of the file
+  $file_contents = file_get_contents($file_path);
+// output the contents of the file
   echo '<div id="myModal'.$id.'" class="modal">';
   echo '<div class="modal-content">';
   echo '<span class="close" onclick="closeModal('.$id.')">&times;</span>';
-  echo '<p>' . $content . '</p>';
+  echo '<p>'
+    .$file_contents;
+  '</p>';
   echo '</div>';
   echo '</div>';
- 
-
   ?>
-
 </body>
 
 </html>

@@ -9,7 +9,7 @@
     height: 100%; /* Hauteur pleine écran */
     overflow: auto; /* Activer le défilement si nécessaire */
     background-color: rgb(0,0,0); /* Fallback en cas de problèmes avec les navigateurs */
-    background-color: rgba(0,0,0,0.4); /* Couleur noire semi-transparente */
+    background-color:rgb(224, 204, 204); /* Couleur noire semi-transparente */
   }
   
   /* Style du contenu du modal */
@@ -35,4 +35,12 @@
     text-decoration: none;
     cursor: pointer;
   }
+  .genre-image {
+    width: 300px;
+    height: 250px;
+    margin-left: 100px;
+}
+.margin{
+  margin-left: 100px;
+}
   
