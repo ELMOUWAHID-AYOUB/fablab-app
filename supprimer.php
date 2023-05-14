@@ -17,6 +17,7 @@ if (isset($_GET["id"])) {
   $requete->bind_param("i", $id);
 
   if ($requete->execute()) {
+    
     echo "Demande de réservation supprimée avec succès.";
    header("location:demande.php");
   } else {
