@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<?php include_once('navsite0.php'); ?>
+<?php include_once('./NAV/navsite0.php'); ?>
 <div class="container">
 <?php
 //Import PHPMailer classes into the global namespace

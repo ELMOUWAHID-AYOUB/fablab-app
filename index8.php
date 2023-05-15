@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html>
+<?php
+session_start();
+error_reporting(0);
+if (empty($_SESSION['username'])) {
+	header('location: page.php');
+} ?>
 
 <head>
 	<title>Application d'inventaire</title>
 	<link rel="stylesheet" href="bootstrap-5.3.0-alpha3-dist\css\bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="stylee.css">
+	<link rel="stylesheet" type="text/css" href="./STYLE/STYLE.css">
 </head>
 
-<body style="background-color: #CCCCCC">
+<body style="background-color:#97B2DE">
 	<?php
 	error_reporting(0);
-	include_once('navsitei.php'); ?>
+	include_once('./NAV/navsitei.php'); ?>
 	<div class="container">
 		<?php require_once 'process.php'; ?>
-		<?php $genre=$_GET['genre']; ?>
+		<?php $genre = $_GET['genre']; ?>
 		<?php if (isset($_SESSION['message'])) : ?>
 			<div class="alert alert-<?= $_SESSION['msg_type'] ?>">
 				<?php
@@ -23,17 +30,17 @@
 			</div>
 		<?php endif ?>
 		<form action="process.php" method="POST">
-		<div id ="image" class="row">
-		<div class="form-group col-md-6">
-			<br> 
-		<div ><img src="image/<?php echo $genre; ?>.jpg" alt="<?php echo $genre; ?>" class="genre-image" >
-	</div>
-						</div>
-						<div class="form-group col-md-6">
-							<br><br><br><br><br><br>
-							<input type="file" name="nomDuFichier" accept=".csv, .txt, .xlsx" value="vide" class="margin" >
-						</div>
+			<div id="image" class="row">
+				<div class="form-group col-md-6">
+					<br>
+					<div><img src="image/<?php echo $genre; ?>.jpg" alt="<?php echo $genre; ?>" class="genre-image">
 					</div>
+				</div>
+				<div class="form-group col-md-6">
+					<br><br><br><br><br><br>
+					<input type="file" name="nomDuFichier" accept=".csv, .txt, .xlsx" value="vide" class="margin">
+				</div>
+			</div>
 			<input type="hidden" name="id" value="<?php echo $id; ?>">
 			<div class="form-group">
 				<input list="browsers" type="hidden" name="nom" class="form-control" placeholder="Entrez le nom" value="<?php echo $genre ?>">
@@ -88,7 +95,7 @@
 		</form>
 	</div>
 	</div>
-	<h2>Table des  <?php echo $genre ?>s: </h2>
+	<h2>Table des <?php echo $genre ?>s: </h2>
 	<table class="table">
 		<thead>
 			<tr>
@@ -96,7 +103,7 @@
 				<th>MODULE</th>
 				<th>SALLE</th>
 				<th>DATE</th>
-				<th>ETAT</th>	
+				<th>ETAT</th>
 				<th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspACTION</th>
 
 			</tr>
@@ -138,10 +145,10 @@
 			// notre code JavaScript
 		  let message = "Cliquez  sur OK pour revenir a la page pricipale";
 		 if (window.confirm(message)) {
-		window.location.href = "suppequip.php?genre='.$genre.'&delete=' . $id . '";
+		window.location.href = "suppequip.php?genre=' . $genre . '&delete=' . $id . '";
 		 }
 		 else{
-			window.location.href = "index8.php?genre='. $genre .'";
+			window.location.href = "index8.php?genre=' . $genre . '";
 
 		 }
 		};
@@ -154,5 +161,5 @@
 	</table>
 	</div>
 </body>
-<link rel="stylesheet" type="text/css" href="style.css">
+
 </html>

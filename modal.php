@@ -5,10 +5,10 @@
   <title>Mon Modal</title>
 
   <!-- Inclure le CSS pour le modal -->
-  <link rel="stylesheet" href="stylee.css">
+  <link rel="stylesheet" href="./style/modal.css">
 
   <!-- Inclure le script JavaScript pour le modal -->
-  <script src="script.js"></script>
+  <script src="./SCRIPT/script.js"></script>
 
 </head>
 

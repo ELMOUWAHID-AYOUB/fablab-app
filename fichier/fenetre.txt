@@ -1,1 +1,3 @@
-SALUT 2
+PC, ou ordinateur personnel, est un appareil électronique qui permet de traiter des données, d'exécuter des programmes et d'accéder
+ à des ressources en ligne. Il est composé d'un boîtier contenant des composants électroniques tels que la carte mère,le processeur, 
+la mémoire vive, le disque dur ou SSD, la carte graphique, le bloc d'alimentation, etc.

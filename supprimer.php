@@ -1,5 +1,5 @@
 <?php
-include_once('navsitep.php');
+include_once('./NAV/navsitep.php');
 // Connexion à la base de données
 $serveur = "localhost";
 $utilisateur = "root";

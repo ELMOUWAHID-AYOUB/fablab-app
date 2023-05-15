@@ -9,7 +9,7 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<?php include_once('navsite0.php'); ?>
+<?php include_once('./NAV/NAVSITE0.php'); ?>
   <div class="container mt-5">
   <h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNotre site</h1>
     <div class="row">

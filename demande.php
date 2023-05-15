@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<?php
+session_start();
+error_reporting(0);
+if (empty($_SESSION['username'])) {
+    header('location: page.php');
+} ?>
 <html>
   <head>
   <link rel="stylesheet" href="bootstrap-5.3.0-alpha3-dist\css\bootstrap.min.css">
@@ -7,8 +13,7 @@
     </style>
   </head>
   <body>
-  <?php include_once('navsitep.php'); ?>
-  
+  <?php include_once('./NAV/NAVSITEP.php'); ?>
     <h1  style="color:red;">Demandes de réservation:</h1>
     <table class="table">
       <tr>

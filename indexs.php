@@ -1,20 +1,25 @@
 
 <!DOCTYPE html>
+<?php
+session_start();
+error_reporting(0);
+if(empty($_SESSION['username'])){
+    header('location: page.php');
+} ?>
 <head>
     <meta charset="UTF-8">
    <link rel="stylesheet" href="bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
 </head>
-<body>
-    <?php include_once('navsites.php'); ?>
+<body style="background-color:rgba(218, 206, 206, 0.3)">
+    <?php include_once('./NAV/navsites.php'); ?>
     <div> 
-        <h1 class="text text-center text-primary">Ajouter un equipement</h1>
     </div>
     <div class="container">
             <div class="row">
              <div class="col-md-4">   
             <h3>PC</h3>
             <div class="card" style="width: 18rem;">
-                    <img src="image/paper.jpG" class="card-img-top" alt="pc">
+                    <img src="image/Pc.jpG" class="card-img-top" alt="pc">
                     <div class="card-body">
                     <h5 class="card-title">Pc hp</h5>
                     <p class="card-text">tu peux ajouter supprimer et modiffe les pc portables</p>
@@ -60,7 +65,7 @@
        <div class="col-md-4">   
                <h3>parfeu</h3>
            <div class="card" style="width: 18rem;">
-               <img src="image/parfeu.jpG" class="card-img-top" alt="pc">
+               <img src="image/pare-feu.jpG" class="card-img-top" alt="pc">
                <div class="card-body">
                  <h5 class="card-title">parfeu</h5>
                  <p class="card-text">tu peux ajouter supprimer et modiffe parfeu </p>
@@ -71,7 +76,7 @@
            <div class="col-md-4">   
                <h3>voiip</h3>
            <div class="card" style="width: 18rem;">
-               <img src="image/voiip.jpG" class="card-img-top height: " alt="pc">
+               <img src="image/voip.jpG" class="card-img-top height: " alt="pc">
                <div class="card-body">
                  <h5 class="card-title">voiip</h5>
                  <p class="card-text">tu peux ajouter supprimer et modiffe les voiip</p>
@@ -84,7 +89,7 @@
         <div class="col-md-4">   
        <h3>Interfaces</h3>
        <div class="card" style="width: 18rem;">
-           <img src="image/Interfaces.jpG" class="card-img-top" alt="pc">
+           <img src="image/Interface.jpG" class="card-img-top" alt="pc">
            <div class="card-body">
              <h5 class="card-title">Interfaces</h5>
              <p class="card-text">tu peux ajouter supprimer et modiffe lesInterfaces</p>
@@ -95,7 +100,7 @@
    <div class="col-md-4">   
            <h3>connectiques</h3>
        <div class="card" style="width: 18rem;">
-           <img src="image/connectiques.jpG" class="card-img-top" alt="pc">
+           <img src="image/connecteur.jpG" class="card-img-top" alt="pc">
            <div class="card-body">
              <h5 class="card-title">connectiques </h5>
              <p class="card-text">tu peux ajouter supprimer et modiffe les connectiques</p>

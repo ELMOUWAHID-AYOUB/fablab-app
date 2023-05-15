@@ -1,30 +1,37 @@
 <!DOCTYPE html>
+<?php
+session_start();
+error_reporting(0);
+if (empty($_SESSION['username'])) {
+    header('location: page.php');
+} ?>
 <html>
   <head>
     <title>Réservation d'équipement réseau</title>
     <link rel="stylesheet" href="bootstrap-5.3.0-alpha3-dist\css\bootstrap.min.css">
   </head>
   <body>
-  <?php include_once('navsites.php'); ?>
+  <?php include_once('./NAV/navsites.php'); ?>
+  <h1 style="color:black">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRESERVATION</h1>
   <div class="container">
-    <h1 style="color:green">Réservation d'équipement:</h1>
     <br>
     <form method="post" action="res.php">
     <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-0">
             <div class="form-group">
-      <label for="nom">Nom :</label>
-      <input type="text" name="nom" required><br>
+      <label for="nom"></label>
+      <input type="hidden" name="nom" value="<?php $user=$_SESSION['username']; echo $user ?>" ><br>
 </div>
 </div>
-<div class="col-md-4">
-      <div class="form-group">
-      <label for="email">Message :</label>
-      <input type="text" name="email" required><br>
+<div class="col-md-8">
+<div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" name="email" rows="5" required></textarea>
 </div>
 </div>
 <div class="col-md-4">
 <div class="form-group">
+  <br><br><br>
       <label for="date">Date de réservation :</label>
       <input type="date" name="date" required><br>
 </div>
@@ -67,11 +74,12 @@
       $utilisateur = "root";
       $motdepasse = "";
       $basededonnees = "equipement";
-
+      $user=$_SESSION['username'];
       $connexion = new mysqli($serveur, $utilisateur, $motdepasse, $basededonnees);
-
+      $user=$_SESSION['username'];
+      echo $user;
       // Récupération des demandes de réservation
-      $requete = "SELECT * FROM reservations";
+      $requete = "SELECT * FROM reservations where nom='$user'";
       $resultat = $connexion->query($requete);
 
       // Affichage des demandes de réservation dans une table

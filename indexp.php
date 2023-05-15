@@ -11,14 +11,14 @@ if(empty($_SESSION['username'])){
    <link rel="stylesheet" href="bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
    <link rel="stylesheet" type="text/css" href="stylee.css">
 </head>
-<body>
+<body style="background-color:rgba(218, 206, 206, 0.3)">
     <?php 
-    include_once('navsiteP.php'); ?>
+    include_once('./NAV/navsiteP.php'); ?>
     <div class="container">
             <div class="row">
              <div class="col-md-4">   
             <div class="card" style="width: 18rem;">
-                    <img src="image/paper.jpG" class="card-img-top" alt="pc">
+                    <img src="image/Pc.jpG" class="card-img-top" alt="pc">
                     <div class="card-body">
                     <h5 class="card-title">Pc</h5>
                     <p class="card-text">Vous pouvez ajouter,supprimer,modifier(pc)</p>
@@ -62,7 +62,7 @@ if(empty($_SESSION['username'])){
        <div class="col-md-4">   
               
            <div class="card" style="width: 18rem;">
-               <img src="image/parfeu.jpG" class="card-img-top" alt="pc">
+               <img src="image/pare-feu.jpG" class="card-img-top" alt="pc">
                <div class="card-body">
                  <h5 class="card-title">pare-feu</h5>
                  <p class="card-text">Vous pouvez ajouter,supprimer,modifier(Serveur)</p>
@@ -73,7 +73,7 @@ if(empty($_SESSION['username'])){
            <div class="col-md-4">   
               
            <div class="card" style="width: 18rem;">
-               <img src="image/voiip.jpG" class="card-img-top height: " alt="pc">
+               <img src="image/voip.jpG" class="card-img-top height: " alt="pc">
                <div class="card-body">
                  <h5 class="card-title">voip</h5>
                  <p class="card-text">Vous pouvez ajouter,supprimer,modifier(Voip)</p>
@@ -86,7 +86,7 @@ if(empty($_SESSION['username'])){
         <div class="col-md-4">   
        <h3>Interfaces</h3>
        <div class="card" style="width: 18rem;">
-           <img src="image/Interfaces.jpG" class="card-img-top" alt="pc">
+           <img src="image/Interface.jpG" class="card-img-top" alt="pc">
            <div class="card-body">
              <h5 class="card-title">Interfaces</h5>
              <p class="card-text">Vous pouvez ajouter,supprimer,modifier()</p>
