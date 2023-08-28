@@ -8,6 +8,8 @@
 
 <body style="background-color:#97B2DE">
 	<?php
+	 include("../../../acces/entrer/session.php");
+     session_start();
 	include_once('../../../composent/nav/navsitei.php'); ?>
 	<div class="container">
 		<?php require_once '../gerer_equipement/process.php'; ?>
@@ -38,10 +40,6 @@
 				<datalist id="browsers">
 					<option value="connectiques">
 				</datalist>
-			</div>
-			<div class="form-group">
-				<input type="hidden" name="index" value="index8">
-
 			</div>
 			<div class="row">
 				<div class="col-md-6">
@@ -97,7 +95,6 @@
 	<table class="table">
 		<thead>
 			<tr>
-				<th>NOM</th>
 				<th>MODULE</th>
 				<th>SALLE</th>
 				<th>DATE</th>
@@ -108,22 +105,19 @@
 		<tbody>
 
 			<?php
-			$index = 'index8';
-			// echo $index;
+			
 			if (true) {
 				$result = $mysqli->query("SELECT * FROM equi where nom='$genre' ") or die($mysqli->error);
-
 				if ($result->num_rows) {
 					while ($row = $result->fetch_assoc()) {
 						echo "<tr>";
-						echo "<td>" . $row['nom'] . "</td>";
 						echo "<td>" . $row['module'] . "</td>";
 						echo "<td>" . $row['salle'] . "</td>";
 						echo "<td>" . $row['Date'] . "</td>";
 						echo "<td>" . $row['etat'] . "</td>";
 						echo "<td>
-                            <a href='index8.php?genre=$genre&edit=" . $row['id'] . "&index=" . $index . "' class='btn btn-info'>Modifier</a>
-                            <a href='../gerer_equipement/process.php?genre=$genre&zdelete=" . $row['id'] . "' class='btn btn-danger'>Supprimer</a>
+                            <a href='index8.php?genre=$genre&edit=".$row['id']."' class='btn btn-info'>Modifier</a>
+                            <a href='../gerer_equipement/process.php?genre=$genre&delete=" . $row['id'] . "' class='btn btn-danger'>Supprimer</a>
                         </td>";
 						echo "</tr>";
 						echo "<td>";
@@ -134,15 +128,13 @@
 					echo "<tr><td colspan='5'>Aucun résultat trouvé.</td></tr>";
 				}
 			}
-			// $idd = $_GET['d'];
-			if (!empty($idd)) {
-
+			if (!empty($_GET['d'])) {
 				echo '<script>
 				window.onload = function() {
 			// notre code JavaScript
 		  let message = "Attention! Est ce que vraiment voulez-vous supprimer cette equipement?";
 		 if (window.confirm(message)) {
-		window.location.href = "suppequip.php?genre=' . $genre . '&delete=' . $id . '";
+		window.location.href = "../gerer_equipement/suppequip.php?genre=' . $genre . '&delete=' . $id . '";
 		 }
 		 else{
 			window.location.href = "index8.php?genre=' . $genre . '";

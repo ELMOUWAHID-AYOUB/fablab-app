@@ -1,0 +1,1 @@
+: Les câbles réseau, tels que les câbles Ethernet, sont utilisés pour connecter les différents périphériques réseau entre eux. Ils permettent le transfert de données à haute vitesse et sont essentiels pour assurer la connectivité physique du réseau.

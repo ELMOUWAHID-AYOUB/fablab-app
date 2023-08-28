@@ -1,0 +1,1 @@
+vide Les commutateurs sont des appareils qui permettent de relier plusieurs périphériques au sein d'un réseau local (LAN). Ils dirigent le trafic réseau vers la destination appropriée en utilisant les adresses MAC (Media Access Control).

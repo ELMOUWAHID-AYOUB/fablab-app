@@ -1,0 +1,1 @@
+ Le pare-feu est un dispositif qui sécurise le réseau en filtrant le trafic entrant et sortant. Il permet de bloquer les connexions non autorisées et de prévenir les attaques malveillantes.

@@ -1,0 +1,1 @@
+Le matériel réseau est un ensemble d'appareils physiques qui permettent la communication et l'échange de données entre les différents périphériques d'un réseau informatique. Il comprend plusieurs composants essentiels

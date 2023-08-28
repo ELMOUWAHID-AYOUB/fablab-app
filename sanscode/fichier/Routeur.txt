@@ -1,0 +1,1 @@
+ Les routeurs sont des dispositifs qui interconnectent différents réseaux. Ils utilisent des tables de routage pour déterminer le meilleur chemin pour acheminer les paquets de données d'un réseau à un autre, en se basant sur les adresses IP.

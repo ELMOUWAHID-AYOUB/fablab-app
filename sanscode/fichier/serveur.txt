@@ -1,0 +1,1 @@
+Les serveurs sont des ordinateurs puissants qui hébergent des services ou des ressources partagées au sein du réseau. Ils peuvent inclure des serveurs de fichiers, des serveurs d'applications, des serveurs de messagerie, etc.
